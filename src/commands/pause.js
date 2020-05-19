@@ -1,5 +1,5 @@
 module.exports = {
-	name: 'pausar',
+	name: 'pause',
 	description: 'Comando de pausar a música.',
 	cooldown: 5,
 	execute(message) {

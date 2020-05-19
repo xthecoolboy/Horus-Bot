@@ -1,5 +1,5 @@
 module.exports = {
-	name: 'fila',
+	name: 'queue',
 	description: 'Comando para ver a atual fila de músicas.',
 	cooldown: 5,
 	execute(message) {

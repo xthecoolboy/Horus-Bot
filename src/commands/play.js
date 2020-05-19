@@ -2,8 +2,8 @@ const { Util } = require('discord.js');
 const ytdl = require('ytdl-core');
 
 module.exports = {
-	name: 'tocar',
-	description: 'Comanndo para tocar músicas.',
+	name: 'play',
+	description: 'Comando para tocar músicas.',
 	usage: '[command name]',
 	args: true,
 	cooldown: 5,

@@ -1,5 +1,5 @@
 module.exports = {
-	name: 'parar',
+	name: 'stop',
 	description: 'Comando para parar a música de vez!.',
 	cooldown: 5,
 	execute(message) {
@@ -9,5 +9,6 @@ module.exports = {
 		if (!serverQueue) return message.channel.send('Não há nada tocando para eu parar!');
 		serverQueue.songs = [];
 		serverQueue.connection.dispatcher.end('Aahh... acabou com o show! Buuhhh... Música encerrada com sucesso.');
+		return message.channel.send('Aahh... acabou com o show! Buuhhh... Música encerrada com sucesso. Tô saindo :( ');
 	}
 };

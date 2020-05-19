@@ -1,6 +1,6 @@
 module.exports = {
-	name: 'Reiniciar',
-	description: 'Reinicie a música para ouvi-la novamente!',
+	name: 'continue',
+	description: 'Continue a música para ouvi-la novamente!',
 	cooldown: 5,
 	execute(message) {
 		const serverQueue = message.client.queue.get(message.guild.id);

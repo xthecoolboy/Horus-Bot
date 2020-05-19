@@ -17,18 +17,18 @@ module.exports = {
 				'`ban`:    Dê banimentos a infratores \n' +
 				'`botinfo`:    Veja mais sobre mim e meu criador! \n' +
 				'`clear`:    Remova as mensagens de acordo com a quantidade. \n' +
+				'`continue:`    Continue a música para ouvi-la novamente!\n' +
 				'`comandos:`    É este comando aqui, hehe!\n' +
-				'`fila:`    Veja quais são as próximas músicas a serem tocadas na fila!\n' +
 				'`kick:`   Remova jogadores indesejados do servidor\n' +
-				'`parar:`    Pare a música imediatamente!\n' +
-				'`pausar:`    Pause a música!\n' +
+				'`next:`    Pule para a próxima música!\n' +
+				'`np:`    Veja qual música está sendo tocada agora\n' +
+				'`pause:`    Pause a música!\n' +
 				'`ping:`    pong!\n' +
-				'`pular:`    Pule para a próxima música!\n' +
-				'`reiniciar:`    Reinicie a música para ouvi-la novamente!\n' +
+				'`play:`    Toque as músicas!\n' +
+				'`queue:`    Veja quais são as próximas músicas a serem tocadas na fila!\n' +
 				'`rolar:`    Jogue um dado de lados especificados.\n' +
 				'`serverinfo:`    Confira informações sobre este servidor, como por exemplo quem é dono desse palácio! (Spoiler: é o ' + dono + ')!\n' +
-				'`tocando:`    Veja qual música está sendo tocada agora\n' +
-				'`tocar:`    Famoso "play" abrasileirado, hihi\n' +
+				'`stop:`    Pare a música imediatamente!\n' +
 				'`userinfo:`    Veja suas informações ou de um determinado membro\n' +
 				'`volume:`    Altere o volume ou veja o volume atual!\n'
 			);

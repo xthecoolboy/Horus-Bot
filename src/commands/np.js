@@ -1,5 +1,5 @@
 module.exports = {
-	name: 'tocando',
+	name: 'np',
 	description: 'Comando para ver o que está sendo tocado agora',
 	cooldown: 5,
 	execute(message) {

@@ -11,7 +11,11 @@ for (const file of commandFiles) {
 	client.commands.set(command.name, command);
 }
 
-client.once('ready', () => console.log('READY!'));
+client.once('ready', () => {
+	console.log(`Logado com o bot ${client.user.tag} em ${client.guilds.cache.size} servidores`);
+	client.user.setActivity('Sendo desenvolvido! :)', { type: 'PLAYING' })
+});
+
 
 client.on('message', message => {
 	if (!message.content.startsWith(client.config.prefix) || message.author.bot) return;

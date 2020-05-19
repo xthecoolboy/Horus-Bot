@@ -7,13 +7,14 @@
 	"license": "MIT",
 	"private": true,
 	"scripts": {
-		"start": "node ."
+		"start": "nodemon core"
 	},
 	"dependencies": {
 		"discord.js": "^12.2.0",
 		"dotenv": "^8.2.0",
 		"ffmpeg-static": "^4.2.1",
 		"node-gyp": "^6.1.0",
+		"nodemon": "^2.0.4",
 		"rebuild": "^0.1.2",
 		"ytdl-core": "^2.1.2"
 	},

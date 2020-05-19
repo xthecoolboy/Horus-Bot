@@ -21,9 +21,11 @@ module.exports = {
         canal = canal.join('');
         canal = canal.split('>').join('');
         const channel = client.channels.cache.get(canal);
+        console.log(channel);
 
         if (!channel) {
-            return msg.reply('Canal ' + canalnome + ' não encontrado no servidor');
+            return msg.reply('Canal ' + canalnome + ' não encontrado no servidor\n' +
+            'Isso pode ter acontecido porque você criou o canal agora ou porque o canal não existe.');
         }
 
         channel.send(`@everyone ${message}`);

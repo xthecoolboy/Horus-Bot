@@ -1,5 +1,5 @@
 module.exports = {
-	name: 'pular',
+	name: 'next',
 	description: 'Comando para pular de música',
 	cooldown: 5,
 	execute(message) {
