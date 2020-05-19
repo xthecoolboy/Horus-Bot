@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="HorusBot" title="#horusbot" src=".github/githubHorus.png" />
+    <img alt="HorusBot" title="#horusbot" src="https://raw.githubusercontent.com/luizeduardomr/Horus-bot/master/.github/githubHorus.png" />
 </h1>
 
 # Horus Bot
