@@ -26,7 +26,7 @@ The nodemon will be started and, for each Save data, the bot will be restarted w
 If the nodemon fails to run or gives an error, the dependencies have not been installed correctly.
 </br>
 <br>
-Remember to create your application at <a href="https://discord.com/developers/applications">Discord/developer</a>, taking your bot's Token and adding it to `bot.login(yourToken);`
+Remember to create your application at <a href="https://discord.com/developers/applications">Discord/developer</a>, taking your bot's Token and adding it to `client.login(yourToken);`
 
 # Help
 
