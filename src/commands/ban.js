@@ -1,11 +1,9 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();  // Inicialização do client (bot)
-
 module.exports = {
     name: 'ban',
     description: 'Dê banimentos em membros do servidor',
     cooldown: 5,
-    execute(msg) {
+    execute(client, msg, args) {
         if (!msg.guild) return;
 
         const userban = msg.mentions.members.first();
@@ -24,11 +22,11 @@ module.exports = {
                             let kickEmbed = new Discord.MessageEmbed()
                                 .setTitle('Banido com sucesso')
                                 .setColor('#d95e40')
-                                .addField('Usuário banido', `${userban} com ID ${userban.id} `)
-                                .addField('Banido por', `<@${msg.author.id}> com ID  ${msg.author.id}`)
-                                .addField('Banido em', msg.channel)
-                                .addField('Quando', msg.createdAt.toUTCString().substr(0, 16))
-                                .addField('Motivo', motivo);
+                                .addField('Usuário banido', `\`${userban}\` com ID \`${userban.id}\``)
+                                .addField('Banido por', `<@\`${msg.author.id}\`> com ID  \`${msg.author.id}\``)
+                                .addField('Banido em', `\`${msg.channel}\``)
+                                .addField('Quando', `\`${msg.createdAt.toUTCString().substr(0, 16)}\``)
+                                .addField('Motivo', `\`${motivo}\``);
 
                             msg.reply(kickEmbed);
 
@@ -48,11 +46,11 @@ module.exports = {
                             let kickEmbed = new Discord.MessageEmbed()
                                 .setTitle('Banido com sucesso')
                                 .setColor('#d95e40')
-                                .addField('Usuário banido', `${userban} com ID ${userban.id} `)
-                                .addField('Banido por', `<@${msg.author.id}> com ID  ${msg.author.id}`)
-                                .addField('Banido em', msg.channel)
-                                .addField('Quando', msg.createdAt.toUTCString().substr(0, 16))
-                                .addField('Motivo', 'Motivo não declarado');
+                                .addField('Usuário banido', `\`${userban}\` com ID \`${userban.id}\``)
+                                .addField('Banido por', `<@\`${msg.author.id}\`> com ID  \`${msg.author.id}\``)
+                                .addField('Banido em', `\`${msg.channel}\``)
+                                .addField('Quando', `\`${msg.createdAt.toUTCString().substr(0, 16)}\``)
+                                .addField('Motivo', '`Motivo não declarado`');
 
                             msg.reply(kickEmbed);
 

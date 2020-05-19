@@ -7,14 +7,14 @@ module.exports = {
 	usage: '[command name]',
 	args: true,
 	cooldown: 5,
-	async execute(message, args) {
-		const { channel } = message.member.voice;
-		if (!channel) return message.channel.send('Você precisa estar em um canal de música para ouvir música!');
-		const permissions = channel.permissionsFor(message.client.user);
-		if (!permissions.has('CONNECT')) return message.channel.send('Não posso me conectar ao seu canal de música pois não possuo permissões suficientes!');
-		if (!permissions.has('SPEAK')) return message.channel.send('Não posso falar e ouvir neste canal de música. Como vou cantar pra você? Faltam-me permissões!');
+	async execute(client, msg, args) {
+		const { channel } = msg.member.voice;
+		if (!channel) return msg.channel.send('Você precisa estar em um canal de música para ouvir música!');
+		const permissions = channel.permissionsFor(msg.client.user);
+		if (!permissions.has('CONNECT')) return msg.channel.send('Não posso me conectar ao seu canal de música pois não possuo permissões suficientes!');
+		if (!permissions.has('SPEAK')) return msg.channel.send('Não posso falar e ouvir neste canal de música. Como vou cantar pra você? Faltam-me permissões!');
 
-		const serverQueue = message.client.queue.get(message.guild.id);
+		const serverQueue = msg.client.queue.get(msg.guild.id);
 		const songInfo = await ytdl.getInfo(args[0].replace(/<(.+)>/g, '$1'));
 		const song = {
 			id: songInfo.video_id,
@@ -25,25 +25,25 @@ module.exports = {
 		if (serverQueue) {
 			serverQueue.songs.push(song);
 			console.log(serverQueue.songs);
-			return message.channel.send(`✅ **${song.title}** foi adicionado à fila!`);
+			return msg.channel.send(`✅ **${song.title}** foi adicionado à fila!`);
 		}
 
 		const queueConstruct = {
-			textChannel: message.channel,
+			textChannel: msg.channel,
 			voiceChannel: channel,
 			connection: null,
 			songs: [],
 			volume: 2,
 			playing: true
 		};
-		message.client.queue.set(message.guild.id, queueConstruct);
+		msg.client.queue.set(msg.guild.id, queueConstruct);
 		queueConstruct.songs.push(song);
 
 		const play = async song => {
-			const queue = message.client.queue.get(message.guild.id);
+			const queue = msg.client.queue.get(msg.guild.id);
 			if (!song) {
 				queue.voiceChannel.leave();
-				message.client.queue.delete(message.guild.id);
+				msg.client.queue.delete(msg.guild.id);
 				return;
 			}
 
@@ -63,9 +63,9 @@ module.exports = {
 			play(queueConstruct.songs[0]);
 		} catch (error) {
 			console.error(`Não entrei no canal de música: ${error}`);
-			message.client.queue.delete(message.guild.id);
+			msg.client.queue.delete(msg.guild.id);
 			await channel.leave();
-			return message.channel.send(`Não entrei no canal de música ${error}`);
+			return msg.channel.send(`Não entrei no canal de música ${error}`);
 		}
 	}
 };

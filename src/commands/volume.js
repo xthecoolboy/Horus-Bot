@@ -2,7 +2,7 @@ module.exports = {
 	name: 'volume',
 	description: 'Comando de volume!.',
 	cooldown: 5,
-	execute(message, args) {
+	execute(client, msg) {
 		const { channel } = message.member.voice;
 		if (!channel) return message.channel.send('Você precisa estar em um canal de música para ouvir música!');
 		const serverQueue = message.client.queue.get(message.guild.id);

@@ -49,10 +49,11 @@ client.on('message', message => {
 	setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
 
 	try {
-		command.execute(message, args);
+		command.execute(client, message, args);
 	} catch (error) {
 		console.error(error);
 		message.reply('ocorreu um erro durante a execução deste comando, vou me auto investigar!');
+		//message.reply('ocorreu um erro durante a execução deste comando, o desenvolvedor saiu para tomar café, mas ele já volta para corrigir o problema!');
 	}
 });
 

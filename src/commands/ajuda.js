@@ -1,12 +1,10 @@
 const Discord = require('discord.js');
-const MusicClient = require('../struct/Client');
-const client = new MusicClient({ token: process.env.DISCORD_TOKEN, prefix: process.env.DISCORD_PREFIX });
 
 module.exports = {
 	name: 'ajuda',
 	description: 'Comando de ajuda.',
 	cooldown: 5,
-	execute(msg) {
+	execute(client, msg) {
 		const helpEmbed = new Discord.MessageEmbed()
 			.setColor('#d95e10')
 			.setTitle('Ajuda do tio Horus')

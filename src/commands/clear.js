@@ -1,11 +1,9 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();  // Inicialização do client (bot)
-
 module.exports = {
     name: 'clear',
     description: 'Limpe mensagens do servidor!',
     cooldown: 5,
-    execute(msg) {
+	execute(client, msg) {
         const valor = msg.content.split(" ");
         const channel = msg.channel;
         //const FetchMsg = channel.messages.fetch();

@@ -1,11 +1,10 @@
 const Discord = require('discord.js');
-
 module.exports = {
 	name: 'comandos',
 	description: 'Comando de ajuda.',
 	cooldown: 5,
-	execute(message) {
-		var dono = message.guild.owner.displayName;
+	execute(client, msg) {
+		var dono = msg.guild.owner.displayName;
 		const helpEmbed = new Discord.MessageEmbed()
 			.setColor('#d95e10')
 			.setTitle('Comandos do tio Horus')
@@ -33,6 +32,6 @@ module.exports = {
 				'`userinfo:`    Veja suas informações ou de um determinado membro\n' +
 				'`volume:`    Altere o volume ou veja o volume atual!\n'
 			);
-		return message.channel.send(helpEmbed);
+		return msg.channel.send(helpEmbed);
 	}
 };

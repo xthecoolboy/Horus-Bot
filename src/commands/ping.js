@@ -1,11 +1,9 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();  // Inicialização do client (bot)
-
 module.exports = {
     name: 'ping',
     description: 'pong!',
     cooldown: 5,
-    execute(msg) {
+    execute(client, msg) {
         if ((Date.now() - msg.createdTimestamp) < 40) {
             var ping = (client.createdAt - msg.createdAt);
             const exampleEmbed = new Discord.MessageEmbed()
@@ -27,7 +25,6 @@ module.exports = {
                     { name: 'API: ', value: Math.round(client.ping), inline: true },
                 );
             msg.reply(exampleEmbed);
-
         }
 
     }

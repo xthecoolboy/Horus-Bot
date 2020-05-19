@@ -2,13 +2,13 @@ module.exports = {
 	name: 'stop',
 	description: 'Comando para parar a música de vez!.',
 	cooldown: 5,
-	execute(message) {
-		const { channel } = message.member.voice;
-		if (!channel) return message.channel.send('Você precisa estar em um canal de música para ouvir música!');
-		const serverQueue = message.client.queue.get(message.guild.id);
-		if (!serverQueue) return message.channel.send('Não há nada tocando para eu parar!');
+	execute(client, msg) {
+		const { channel } = msg.member.voice;
+		if (!channel) return msg.channel.send('Você precisa estar em um canal de música para ouvir música!');
+		const serverQueue = msg.client.queue.get(msg.guild.id);
+		if (!serverQueue) return msg.channel.send('Não há nada tocando para eu parar!');
 		serverQueue.songs = [];
 		serverQueue.connection.dispatcher.end('Aahh... acabou com o show! Buuhhh... Música encerrada com sucesso.');
-		return message.channel.send('Aahh... acabou com o show! Buuhhh... Música encerrada com sucesso. Tô saindo :( ');
+		return msg.channel.send('Aahh... acabou com o show! Buuhhh... Música encerrada com sucesso. Tô saindo :( ');
 	}
 };

@@ -1,12 +1,9 @@
 const Discord = require('discord.js');
-const MusicClient = require('../struct/Client');
-const client = new MusicClient({ token: process.env.DISCORD_TOKEN, prefix: process.env.DISCORD_PREFIX, debug: process.env.DEBUG });
-
 module.exports = {
     name: 'prefix',
     description: 'Comando para alterar de prefixo.',
     cooldown: 5,
-    execute(msg) {
+	execute(client, msg) {
         //;prefixo !
         const newPrefixo = msg.content.split(" ")[1];
         if(!newPrefixo){

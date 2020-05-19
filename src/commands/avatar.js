@@ -3,7 +3,7 @@ module.exports = {
 	name: 'avatar',
 	description: 'Comando para ver o seu ou o avatar do usuário!',
 	cooldown: 5,
-	execute(msg) {
+	execute(client, msg) {
 		const usuario = msg.mentions.members.first();
 
 		if (usuario) {

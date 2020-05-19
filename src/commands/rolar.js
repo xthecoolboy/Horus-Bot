@@ -1,11 +1,9 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();  // Inicialização do client (bot)
-
 module.exports = {
     name: 'rolar',
     description: 'Jogue um dado aleatório de X lados!',
     cooldown: 5,
-    execute(msg) {
+	execute(client, msg) {
         const messageWords = msg.content.split(' ');
         const rollFlavor = messageWords.slice(2).join(' ');
         if (messageWords[0] === `${prefix}rolar`) {

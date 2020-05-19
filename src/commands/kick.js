@@ -1,11 +1,10 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();  // Inicialização do client (bot)
 
 module.exports = {
     name: 'kick',
     description: 'Remova membros do servidor!',
     cooldown: 5,
-    execute(msg) {
+	execute(client, msg) {
         if (!msg.guild) return;
 
         const userkick = msg.mentions.members.first();
