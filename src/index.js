@@ -23,9 +23,9 @@ client.on('message', message => {
 	const commandName = args.shift().toLowerCase();
 	const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 	if (!command) return;
-	if (command.guildOnly && message.channel.type !== 'text') return message.reply('Oi.. por que está sussurando aqui no privado? hihi.. enfim, não posso executar nenhum comando no privado, apenas nos canais de bot!');
+	if (command.guildOnly && message.channel.type !== 'text') return message.reply('oi.. por que está sussurando aqui no privado? hihi.. enfim, não posso executar nenhum comando no privado, apenas nos canais de bot!');
 	if (command.args && !args.length) {
-		let reply = `Quase fiz o que pediu, só faltou dizer o comando!, ${message.author}!`;
+		let reply = `quase fiz o que pediu, só faltou dizer o comando!, ${message.author}!`;
 		if (command.usage) reply += `\nÉ.. quase isso! O certo seria: \`${client.config.prefix}${command.name} ${command.usage}\``;
 		return message.channel.send(reply);
 	}
@@ -42,7 +42,7 @@ client.on('message', message => {
 		const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
 		if (now < expirationTime) {
 			const timeLeft = (expirationTime - now) / 1000;
-			return message.reply(`Epa, vai com calma! Espere ${timeLeft.toFixed(1)} segundos para usar o comando \`${command.name}\``);
+			return message.reply(`epa, vai com calma! Espere ${timeLeft.toFixed(1)} segundos para usar o comando \`${command.name}\``);
 		}
 	}
 	timestamps.set(message.author.id, now);
@@ -52,7 +52,7 @@ client.on('message', message => {
 		command.execute(message, args);
 	} catch (error) {
 		console.error(error);
-		message.reply('Ocorreu um erro durante a execução deste comando, vou me auto investigar!');
+		message.reply('ocorreu um erro durante a execução deste comando, vou me auto investigar!');
 	}
 });
 
@@ -60,7 +60,7 @@ client.on('message', message => {
 client.on('guildMemberAdd', member => {
 	const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
 	if (!channel) return;
-	channel.send(`Bem vindo ao servidor, ${member}!! Leia as regras e divirta-se :3`);
+	channel.send(`Bem vindo ao servidor, ${member}!! Leia as regras e divirta-se!`);
 });
 
 client.on('guildMemberRemove', member => {

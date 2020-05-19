@@ -20,6 +20,7 @@ module.exports = {
 				{ name: 'Me ajuda a ficar online!', value: 'É... atualmente não estou online, ainda estou sendo desenvolvido.. mas um dia precisarei de ajuda!' },
 				{ name: 'Siga o meu criador lindo e maravilhoso no Instagram!', value: 'https://www.instagram.com/luizdudu' }
 			);
-		return msg.channel.send(helpEmbed);
+		msg.channel.send(helpEmbed);
+		msg.reply('https://discord.gg/npSAC75')
 	}
 };

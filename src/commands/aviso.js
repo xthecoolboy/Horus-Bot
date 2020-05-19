@@ -21,7 +21,6 @@ module.exports = {
         canal = canal.join('');
         canal = canal.split('>').join('');
         const channel = client.channels.cache.get(canal);
-        console.log(channel);
 
         if (!channel) {
             return msg.reply('Canal ' + canalnome + ' não encontrado no servidor\n' +

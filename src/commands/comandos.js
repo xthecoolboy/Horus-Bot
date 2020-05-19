@@ -25,6 +25,7 @@ module.exports = {
 				'`pause:`    Pause a música!\n' +
 				'`ping:`    pong!\n' +
 				'`play:`    Toque as músicas!\n' +
+				'`prefix:`    Veja o prefixo atual ou altere-o.\n' +
 				'`queue:`    Veja quais são as próximas músicas a serem tocadas na fila!\n' +
 				'`rolar:`    Jogue um dado de lados especificados.\n' +
 				'`serverinfo:`    Confira informações sobre este servidor, como por exemplo quem é dono desse palácio! (Spoiler: é o ' + dono + ')!\n' +
