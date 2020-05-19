@@ -17,18 +17,16 @@ This bot is written to run on top of node.js. Please see https://nodejs.org/en/d
 Once you have NodeJS installed, running `npm install` from the bot directory should install all required packages. If this command prints errors, the bot won't work!
 
 
-After installing all dependencies, open your terminal and type `node .` to run the bot project.
-</br>
-<br>
-Remember to create your application at <a href="https://discord.com/developers/applications">Discord/developer</a>, taking your bot's Token and adding it to `bot.login(yourToken);`
-
-After doing this, open the terminal and type:
+After installing all dependencies, open your terminal and type: 
 ```
 npm start
 ```
 The nodemon will be started and, for each Save data, the bot will be restarted with the new changes made.
 
 If the nodemon fails to run or gives an error, the dependencies have not been installed correctly.
+</br>
+<br>
+Remember to create your application at <a href="https://discord.com/developers/applications">Discord/developer</a>, taking your bot's Token and adding it to `bot.login(yourToken);`
 
 # Help
 
