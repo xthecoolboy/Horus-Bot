@@ -1,7 +1,11 @@
 {
 	"name": "horus-bot",
 	"version": "0.1.0",
+<<<<<<< HEAD
 	"description": "A Brazilian bot that will meet all your needs, or almost all...",
+=======
+	"description": "A Brazilian bot that will meet all your needs, or almost all..",
+>>>>>>> 882b3f55c9b3cafe9124136f03dbebd50df4eb2f
 	"main": "src/index.js",
 	"author": "luizeduardomr <https://github.com/luizeduardomr>",
 	"license": "MIT",
