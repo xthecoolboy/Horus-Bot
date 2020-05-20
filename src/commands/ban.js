@@ -22,12 +22,13 @@ module.exports = {
                             let kickEmbed = new Discord.MessageEmbed()
                                 .setTitle('Banido com sucesso')
                                 .setColor('#d95e40')
-                                .addField('Usuário banido', `\`${userban}\` com ID \`${userban.id}\``)
-                                .addField('Banido por', `<@\`${msg.author.id}\`> com ID  \`${msg.author.id}\``)
-                                .addField('Banido em', `\`${msg.channel}\``)
-                                .addField('Quando', `\`${msg.createdAt.toUTCString().substr(0, 16)}\``)
-                                .addField('Motivo', `\`${motivo}\``);
-
+                                .addFields(
+                                    { name: 'Usuário banido', value: `\`${userban}\` com ID \`${userban.id}\``, inline: true },
+                                    { name: 'Banido por', value: `<@\`${msg.author.id}\`> com ID  \`${msg.author.id}\``, inline: true },
+                                    { name: 'Banido em', value: `\`${msg.channel}\``, inline: false },
+                                    { name: 'Data', value: `\`${msg.createdAt.toUTCString().substr(0, 16)}\``, inline: true },
+                                    { name: 'Motivo', value: `\`${motivo}\``, inline: true }
+                                )
                             msg.reply(kickEmbed);
 
                         })
@@ -46,12 +47,13 @@ module.exports = {
                             let kickEmbed = new Discord.MessageEmbed()
                                 .setTitle('Banido com sucesso')
                                 .setColor('#d95e40')
-                                .addField('Usuário banido', `\`${userban}\` com ID \`${userban.id}\``)
-                                .addField('Banido por', `<@\`${msg.author.id}\`> com ID  \`${msg.author.id}\``)
-                                .addField('Banido em', `\`${msg.channel}\``)
-                                .addField('Quando', `\`${msg.createdAt.toUTCString().substr(0, 16)}\``)
-                                .addField('Motivo', '`Motivo não declarado`');
-
+                                .addFields(
+                                    { name: 'Usuário banido', value: `\`${userban}\` com ID \`${userban.id}\``, inline: true },
+                                    { name: 'Banido por', value: `<@\`${msg.author.id}\`> com ID  \`${msg.author.id}\``, inline: true },
+                                    { name: 'Banido em', value: `\`${msg.channel}\``, inline: false },
+                                    { name: 'Data', value: `\`${msg.createdAt.toUTCString().substr(0, 16)}\``, inline: true },
+                                    { name: 'Motivo', value: 'Motivo não declarado', inline: true }
+                                )
                             msg.reply(kickEmbed);
 
                         })
@@ -75,3 +77,12 @@ module.exports = {
         }
     }
 }
+
+/*
+                                .addField('Usuário banido', `\`${userban}\` com ID \`${userban.id}\``)
+                                .addField('Banido por', `<@\`${msg.author.id}\`> com ID  \`${msg.author.id}\``)
+                                .addField('Banido em', `\`${msg.channel}\``)
+                                .addField('Quando', `\`${msg.createdAt.toUTCString().substr(0, 16)}\``)
+                                .addField('Motivo', '`Motivo não declarado`');
+
+                                */

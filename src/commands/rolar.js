@@ -6,7 +6,7 @@ module.exports = {
 	execute(client, msg) {
         const messageWords = msg.content.split(' ');
         const rollFlavor = messageWords.slice(2).join(' ');
-        if (messageWords[0] === `${prefix}rolar`) {
+        if (messageWords[0] === `${client.config.prefix}rolar`) {
             if (messageWords.length === 1) {
                 // !roll
                 return msg.reply(

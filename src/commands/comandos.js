@@ -16,7 +16,6 @@ module.exports = {
 				'`ban`:    Dê banimentos a infratores \n' +
 				'`botinfo`:    Veja mais sobre mim e meu criador! \n' +
 				'`clear`:    Remova as mensagens de acordo com a quantidade. \n' +
-				'`continue:`    Continue a música para ouvi-la novamente!\n' +
 				'`comandos:`    É este comando aqui, hehe!\n' +
 				'`kick:`   Remova jogadores indesejados do servidor\n' +
 				'`next:`    Pule para a próxima música!\n' +
@@ -26,12 +25,16 @@ module.exports = {
 				'`play:`    Toque as músicas!\n' +
 				'`prefix:`    Veja o prefixo atual ou altere-o.\n' +
 				'`queue:`    Veja quais são as próximas músicas a serem tocadas na fila!\n' +
+				'`resume:`    Continue a música para ouvi-la novamente!\n' +
 				'`rolar:`    Jogue um dado de lados especificados.\n' +
 				'`serverinfo:`    Confira informações sobre este servidor, como por exemplo quem é dono desse palácio! (Spoiler: é o ' + dono + ')!\n' +
 				'`stop:`    Pare a música imediatamente!\n' +
 				'`userinfo:`    Veja suas informações ou de um determinado membro\n' +
 				'`volume:`    Altere o volume ou veja o volume atual!\n'
-			);
-		return msg.channel.send(helpEmbed);
+			)
+			.setFooter(`Discord do desenvolvedor: luiz#3996 <3`, 'https://avatars3.githubusercontent.com/u/49352785?s=460&u=fcced9885ced69cbe77d9a1503b987992192a766&v');
+
+		msg.reply(`**eu ainda estou em fase de desenvolvimento. Caso algum comando não funcione ou esteja funcionando de forma errada, avise ao meu desenvolvedor, por favor!**`);
+		msg.channel.send(helpEmbed)
 	}
 };

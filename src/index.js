@@ -13,7 +13,7 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
 	console.log(`Logado com o bot ${client.user.tag} em ${client.guilds.cache.size} servidores`);
-	client.user.setActivity('Sendo desenvolvido! :)', { type: 'PLAYING' })
+	client.user.setActivity(';ajuda ou ;comandos', { type: 'PLAYING' })
 });
 
 

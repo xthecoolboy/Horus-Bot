@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 module.exports = {
     name: 'userinfo',
-    description: 'Remova membros do servidor!',
+    description: 'Confira informações de membros do servidor!',
     cooldown: 5,
     execute(client, msg) {
         const usuario = msg.mentions.members.first();
@@ -10,8 +10,8 @@ module.exports = {
             if (msg.author.presence.status == 'online') {
                 const exampleEmbed = new Discord.MessageEmbed()
                     .setColor('#d95e40')
-                    .setTitle('Informações do(a) ' + msg.author.displayName + "  :heart_eyes_cat:")
-                    .setAuthor("✔️ " + ' Você está online.')
+                    .setTitle('Informações do(a) ' + msg.member.displayName + "  :heart_eyes_cat:")
+                    .setAuthor("✔️ " + ' Online')
                     .setThumbnail(msg.author.avatarURL())
                     .addFields(
                         { name: 'Nome Tag :bookmark: ', value: `\`${msg.author.tag}\``, inline: true },
@@ -25,8 +25,8 @@ module.exports = {
             else if (msg.author.presence.status == 'offline') {
                 const exampleEmbed = new Discord.MessageEmbed()
                     .setColor('#d95e40')
-                    .setTitle('Informações do(a) ' + msg.author.displayName + "  :heart_eyes_cat:")
-                    .setAuthor("❌ " + ' Você está invisível!')
+                    .setTitle('Informações do(a) ' + msg.member.displayName + "  :heart_eyes_cat:")
+                    .setAuthor("❌ " + 'Invisível')
                     .setThumbnail(msg.author.avatarURL())
                     .addFields(
                         { name: 'Nome Tag :bookmark: ', value: `\`${msg.author.tag}\``, inline: true },
@@ -40,8 +40,8 @@ module.exports = {
             else {
                 const exampleEmbed = new Discord.MessageEmbed()
                     .setColor('#d95e40')
-                    .setTitle('Informações do(a) ' + msg.author.displayName + "  :heart_eyes_cat:")
-                    .setAuthor("✔️ " + ' Você está ocupado/ausente, não quer que te perturbem, né? Danadinho!')
+                    .setTitle('Informações do(a) ' + msg.member.displayName + "  :heart_eyes_cat:")
+                    .setAuthor("✔️ " + ' Ocupado/ausente, não quer que te perturbem, né?')
                     .setThumbnail(msg.author.avatarURL())
                     .addFields(
                         { name: 'Nome Tag :bookmark: ', value: `\`${msg.author.tag}\``, inline: true },
@@ -60,7 +60,7 @@ module.exports = {
             const exampleEmbed = new Discord.MessageEmbed()
                 .setColor('#d95e40')
                 .setTitle('Informações do(a) ' + usuario.displayName + "  :heart_eyes_cat:")
-                .setAuthor("✔️ " + ' Ele(a) está online!')
+                .setAuthor("✔️ " + ' Online!')
                 .setThumbnail(usuario.user.avatarURL())
                 .addFields(
                     { name: 'Nome Tag :bookmark: ', value: `\`${usuario.user.tag}\``, inline: true },
@@ -75,7 +75,7 @@ module.exports = {
             const exampleEmbed = new Discord.MessageEmbed()
                 .setColor('#d95e40')
                 .setTitle('Informações do(a) ' + usuario.displayName + "  :heart_eyes_cat:")
-                .setAuthor("❌ " + ' Ele(a) está offline!')
+                .setAuthor("❌ " + ' Offline!')
                 .setThumbnail(usuario.user.avatarURL())
                 .addFields(
                     { name: 'Nome Tag :bookmark: ', value: `\`${usuario.user.tag}\``, inline: true },
@@ -90,7 +90,7 @@ module.exports = {
             const exampleEmbed = new Discord.MessageEmbed()
                 .setColor('#d95e40')
                 .setTitle('Informações do(a) ' + usuario.displayName + "  :heart_eyes_cat:")
-                .setAuthor("✔️ " + ' Ele(a) está online mas ocupado/ausente, não o perturbe!')
+                .setAuthor("✔️ " + ' Ocupado(a)/ausente, não o(a) perturbe!')
                 .setThumbnail(usuario.user.avatarURL())
                 .addFields(
                     { name: 'Nome Tag :bookmark: ', value: `\`${usuario.user.tag}\``, inline: true },

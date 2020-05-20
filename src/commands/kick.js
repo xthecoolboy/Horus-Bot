@@ -4,7 +4,7 @@ module.exports = {
     name: 'kick',
     description: 'Remova membros do servidor!',
     cooldown: 5,
-	execute(client, msg) {
+    execute(client, msg) {
         if (!msg.guild) return;
 
         const userkick = msg.mentions.members.first();
@@ -24,11 +24,13 @@ module.exports = {
                             let kickEmbed = new Discord.MessageEmbed()
                                 .setTitle('Removido com sucesso')
                                 .setColor('#d95e40')
-                                .addField('Usuário removido', `${userkick} com ID ${userkick.id} `)
-                                .addField('Removido por', `<@${msg.author.id}> com ID  ${msg.author.id}`)
-                                .addField('Removido em', msg.channel)
-                                .addField('Quando', msg.createdAt.toUTCString().substr(0, 16))
-                                .addField('Motivo', motivo);
+                                .addFields(
+                                    { name: 'Usuário removido', value: `\`${userkick}\` com ID \`${userkick.id}\``, inline: true },
+                                    { name: 'Removido por', value: `<@\`${msg.author.id}\`> com ID  \`${msg.author.id}\``, inline: true },
+                                    { name: 'Removido em', value: `\`${msg.channel}\``, inline: false },
+                                    { name: 'Data', value: `\`${msg.createdAt.toUTCString().substr(0, 16)}\``, inline: true },
+                                    { name: 'Motivo', value: `\`${motivo}\``, inline: true }
+                                )
                             msg.reply(kickEmbed);
                         })
                         .catch(err => {
@@ -46,11 +48,13 @@ module.exports = {
                             let kickEmbed = new Discord.MessageEmbed()
                                 .setTitle('Removido com sucesso')
                                 .setColor('#d95e40')
-                                .addField('Usuário removido', `${userkick} com ID ${userkick.id} `)
-                                .addField('Removido por', `<@${msg.author.id}> com ID  ${msg.author.id}`)
-                                .addField('Removido em', msg.channel)
-                                .addField('Quando', msg.createdAt.toUTCString().substr(0, 16))
-                                .addField('Motivo', 'O motivo não foi declarado');
+                                .addFields(
+                                    { name: 'Usuário removido', value: `\`${userkick}\` com ID \`${userkick.id}\``, inline: true },
+                                    { name: 'Removido por', value: `<@\`${msg.author.id}\`> com ID  \`${msg.author.id}\``, inline: true },
+                                    { name: 'Removido em', value: `\`${msg.channel}\``, inline: false },
+                                    { name: 'Data', value: `\`${msg.createdAt.toUTCString().substr(0, 16)}\``, inline: true },
+                                    { name: 'Motivo', value: 'O motivo não foi declarado', inline: true }
+                                )
                             msg.reply(kickEmbed);
                         })
                         .catch(err => {
@@ -69,7 +73,7 @@ module.exports = {
             }
             // Usuário não mencionado
         } else {
-            msg.reply("Quase removi... só que... faltou você me dizer quem é pra remover! Use " + `${prefix}` + "kick @jogador motivo (opcional) para remover alguém.");
+            msg.reply("quase removi... só que... faltou você me dizer quem é pra remover! Use " + `${prefix}` + "kick @jogador motivo (opcional) para remover alguém.");
         }
     }
 }

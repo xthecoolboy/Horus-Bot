@@ -13,7 +13,8 @@ module.exports = {
                     { name: 'Seu ping:', value: ping + " ms", inline: true },
                     { name: 'API:', value: parseInt(Math.round(client.ping)), inline: true },
                 );
-            msg.reply(exampleEmbed);
+            msg.reply(`estou desenvolvendo essa função ainda, desculpe` + ' :pensive:');
+            msg.channel.send(exampleEmbed);
         }
         else {
             var ping = Date.now() - msg.createdTimestamp + " ms";
@@ -24,7 +25,8 @@ module.exports = {
                     { name: 'Seu ping: ', value: `${ping}` + " ms", inline: true },
                     { name: 'API: ', value: Math.round(client.ping), inline: true },
                 );
-            msg.reply(exampleEmbed);
+            msg.reply(`estou desenvolvendo essa função ainda, desculpe` + ' :pensive:');
+            msg.channel.send(exampleEmbed);
         }
 
     }

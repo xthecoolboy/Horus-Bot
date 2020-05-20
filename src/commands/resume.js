@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 module.exports = {
-	name: 'continue',
+	name: 'resume',
 	description: 'Continue a música para ouvi-la novamente!',
 	cooldown: 5,
 	execute(client, msg) {
