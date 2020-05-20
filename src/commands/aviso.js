@@ -6,9 +6,8 @@ module.exports = {
     execute(client, msg, args) {
         var canalnome = msg.content.split(' ')[1];
         var message = msg.content.split(' ');
-
-        // ;aviso @reports socorro me ajuda
-
+        // ;aviso #reports socorro me ajuda
+        if (!canalnome.startsWith('#') && msg.content.split(' ')[2] != null) { return msg.channel.send(`Você não inseriu o nome do canal. Use o comando da seguinte maneira: \`;aviso #nomeDoCanal Aviso que você quer. Este comando irá dar @everyone automaticamente.\``); }
         message.splice(0, 1);
         message.splice(0, 1);
         message = message.join(' ');
