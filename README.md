@@ -53,7 +53,7 @@ We are still in base development. So, no contributions yet.
 
 ## Thanks for
 
- ©[**iCrawl**](https://github.com/iCrawl).  
+ ©[**iCrawl**](https://github.com/iCrawl) for music feature.
 
 ## Horus Bot 2.0 (version 1.0 went wrong) 
 With the open source code and MIT license, I just ask you to give the credits for this repository at the end of your README.md
