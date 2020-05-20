@@ -49,27 +49,27 @@ DISCORD_PREFIX=
 * Pause/Resume
 
 ## Commands (for now - under development)
-                * `ajuda:`    Ask for help
-				* `avatar`:    View your or another user's avatar
-				* `aviso`:    Give an @everyone warning on a specified channel.
-				* `ban`:    Ban offenders
-				* `botinfo`:     See more about me and my creator!
-				* `clear`:    Remove the messages according to the quantity.
-				* `comandos:`    See this commands
-				* `kick:`   Remove unwanted players from the server
-				* `next:`    Skip to the next song!
-				* `np:`    See which song is being played now
-				* `pause:`    Pause the song
-				* `ping:`    pong! (under development)
-				* `play:`    Play the songs!
-				* `prefix:`    View the current prefix or change it (under development)
-				* `queue:`    See what are the next songs to be played in the queue!
-				* `resume:`    'unpause' the song!
-				* `rolar:`    Roll a dice from specified sides.
-				* `serverinfo:`    Check information about this server
-				* `stop:`    PStop the song immediately!
-				* `userinfo:`    See your information or that of a particular member
-				* `volume:`    Change the volume or see the current volume!
+* `ajuda`:    Ask for help
+* `avatar`:    View your or another user's avatar
+* `aviso`:    Give an @everyone warning on a specified channel.
+* `ban`:    Ban offenders
+* `botinfo`:     See more about me and my creator!
+* `clear`:    Remove the messages according to the quantity.
+* `comandos:`    See this commands
+* `kick`:   Remove unwanted players from the server
+* `next`:    Skip to the next song!
+* `np`:    See which song is being played now
+* `pause`:    Pause the song
+* `ping`:    pong! (under development)
+* `play`:    Play the songs!
+* `prefix`:    View the current prefix or change it (under development)
+* `queue`:    See what are the next songs to be played in the queue!
+* `resume`:    'unpause' the song!
+* `rolar`:    Roll a dice from specified sides.
+* `serverinfo`:    Check information about this server
+* `stop`:    PStop the song immediately!
+* `userinfo`:    See your information or that of a particular member
+* `volume`:    Change the volume or see the current volume!
 
 ## Contributing
 We are still in base development. So, no contributions yet.
