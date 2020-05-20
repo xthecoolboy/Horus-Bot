@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="HorusBot" title="#horusbot" src="https://raw.githubusercontent.com/luizeduardomr/Horus-bot/master/.github/githubHorus.png" />
+    <img alt="HorusBot" title="#horusbot" src="https://i.imgur.com/gpDlHwl.png" />
 </h1>
 
 # Horus Bot - Under construction  👨‍💻
@@ -55,4 +55,5 @@ We are still in base development. So, no contributions yet.
 
  ©[**iCrawl**](https://github.com/iCrawl).  
 
-# Horus Bot 2.0 (version 1.0 went wrong)
+## Horus Bot 2.0 (version 1.0 went wrong) 
+With the open source code and MIT license, I just ask you to give the credits for this repository at the end of your README.md
