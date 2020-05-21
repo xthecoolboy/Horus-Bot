@@ -39,8 +39,8 @@ Some links and servers that I find useful for bot development.
 * [Discord API Oficial server](https://discord.gg/discord-api)
 * [Discord.js Oficial server](https://discord.com/invite/bRCvFy9)
 
-
-# Usage
+</br>
+## Usage
 
 Create an .env file with no name, i.e  `.env` and fill out the values:
 
