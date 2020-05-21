@@ -34,7 +34,7 @@ The official bot server on Discord will be available as soon as the initial deve
 
 Some links and servers that I find useful for bot development.
 * [Discord.js Guide](https://discordjs.guide/)
-* [Discord.js Documentation] (https://discord.js.org/#/docs/main/stable/general/welcome)
+* [Discord.js Documentation](https://discord.js.org/#/docs/main/stable/general/welcome)
 * [Discord API Documentation](https://discord.com/developers/docs/intro)
 * [Discord API Oficial server](https://discord.gg/discord-api)
 * [Discord.js Oficial server](https://discord.com/invite/bRCvFy9)
