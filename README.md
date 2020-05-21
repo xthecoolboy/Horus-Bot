@@ -55,7 +55,8 @@ DISCORD_PREFIX=
 * `ban`:    Ban offenders
 * `botinfo`:     See more about me and my creator!
 * `clear`:    Remove the messages according to the quantity.
-* `comandos`:    See this commands
+* `comandos`:    See this commands.
+* `imagem`: Send an image file to a specific server via the bot
 * `kick`:   Remove unwanted players from the server
 * `next`:    Skip to the next song!
 * `np`:    See which song is being played now
