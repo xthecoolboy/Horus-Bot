@@ -40,7 +40,7 @@ Some links and servers that I find useful for bot development.
 * [Discord.js Oficial server](https://discord.com/invite/bRCvFy9)
 
 
-## Usage
+# Usage
 
 Create an .env file with no name, i.e  `.env` and fill out the values:
 
