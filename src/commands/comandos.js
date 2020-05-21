@@ -17,6 +17,7 @@ module.exports = {
 				'`botinfo`:    Veja mais sobre mim e meu criador! \n' +
 				'`clear`:    Remova as mensagens de acordo com a quantidade. \n' +
 				'`comandos:`    É este comando aqui, hehe!\n' +
+				'`imagem:`    Envie imagens para um determinado canal no servidor!\n' +
 				'`kick:`   Remova jogadores indesejados do servidor\n' +
 				'`next:`    Pule para a próxima música!\n' +
 				'`np:`    Veja qual música está sendo tocada agora\n' +
