@@ -32,6 +32,14 @@ Remember to create your application at <a href="https://discord.com/developers/a
 
 The official bot server on Discord will be available as soon as the initial development is complete.
 
+Some links and servers that I find useful for bot development.
+* [Discord.js Guide](https://discordjs.guide/)
+* [Discord.js Documentation](https://discord.js.org/#/docs/main/stable/general/welcome)
+* [Discord API Documentation](https://discord.com/developers/docs/intro)
+* [Discord API Oficial server](https://discord.gg/discord-api)
+* [Discord.js Oficial server](https://discord.com/invite/bRCvFy9)</br>
+
+
 ## Usage
 
 Create an .env file with no name, i.e  `.env` and fill out the values:
@@ -41,21 +49,15 @@ DISCORD_TOKEN=
 DISCORD_PREFIX=
 ```
 
-## Features
-
-* [discordjs.guide](https://discordjs.guide/), easy for learning!
-* Queue system
-* Volume control
-* Pause/Resume
-
-## Commands (for now - under development)
+## Features (under development)
 * `ajuda`:    Ask for help
 * `avatar`:    View your or another user's avatar
 * `aviso`:    Give an @everyone warning on a specified channel.
 * `ban`:    Ban offenders
 * `botinfo`:     See more about me and my creator!
 * `clear`:    Remove the messages according to the quantity.
-* `comandos`:    See this commands
+* `comandos`:    See this commands.
+* `imagem`: Send an image file to a specific server via the bot
 * `kick`:   Remove unwanted players from the server
 * `next`:    Skip to the next song!
 * `np`:    See which song is being played now
@@ -67,7 +69,7 @@ DISCORD_PREFIX=
 * `resume`:    'unpause' the song!
 * `rolar`:    Roll a dice from specified sides.
 * `serverinfo`:    Check information about this server
-* `stop`:    PStop the song immediately!
+* `stop`:    Stop the song immediately!
 * `userinfo`:    See your information or that of a particular member
 * `volume`:    Change the volume or see the current volume!
 
@@ -76,7 +78,7 @@ We are still in base development. So, no contributions yet.
 
 ## Thanks for
 
- ©[**iCrawl**](https://github.com/iCrawl) for music feature.
+ [**iCrawl**](https://github.com/iCrawl) for music feature.
 
-## Horus Bot 2.0 (version 1.0 went wrong) 
+## Horus Bot 2.0
 With the open source code and MIT license, I just ask you to give the credits for this repository at the end of your README.md
