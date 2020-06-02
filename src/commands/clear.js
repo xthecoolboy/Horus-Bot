@@ -10,5 +10,7 @@ module.exports = {
         channel.bulkDelete(valor[1], true);
         msg.reply(valor[1] + ' mensagens limpas ' + '<@' + client.users.cache.get(msg.author.id) + '> do meu coração!');
         //msg.reply(`\`${valor[1]} mensagens limpas ${client.users.cache.get(msg.author.id)} do meu coração \``);
+        
     }
+
 }
